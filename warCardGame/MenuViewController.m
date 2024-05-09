@@ -23,21 +23,42 @@ NSDate *date;
  [self.datePicker setDate:now animated:NO];
 }
 
-- (IBAction)playButtonPressed:(id)sender {//    //UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//   //ViewController * viewController = [storyboard instantiateViewControllerWithIdentifier:@"viewController"];
-    //    // Present the other view controller
-//    //[self presentViewController:viewController animated:YES completion:nil];
-        newUsername = _tfUsername.text;
+- (IBAction)playButtonPressed:(id)sender {//
+//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//   ViewController * viewController = [storyboard instantiateViewControllerWithIdentifier:@"viewController"];
+////         Present the other view controller
+//    [self presentViewController:viewController animated:YES completion:nil];
+//
+   
+//      NSString *newUsername = self.tfUsername.text; // Get the username from the text field
+//
+//      if (newUsername.length > 0) {
+//          UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//          ViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"viewController"];
+//
+//          // Set the username property of the ViewController
+//          viewController.username = newUsername;
+//
+//          // Present the ViewController
+//          [self presentViewController:viewController animated:YES completion:nil];
+//      } else {
+//          NSLog(@"Username is empty.");
+//      }
     
-        date = self.datePicker.date;
-    
-    if(newUsername.length > 0) {
-        // Create an instance of the SecondViewController
-        ViewController *secondVC = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-        [self presentViewController:secondVC animated:YES completion:nil];
+    NSString *newUsername = self.tfUsername.text;
+
+    if (newUsername.length > 0) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        ViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"viewController"];
+
+        // Set the username property of the ViewController
+        viewController.username = newUsername;
+viewController.playerLabel.text =newUsername;
+        // Present the ViewController
+        [self presentViewController:viewController animated:YES completion:nil];
+    } else {
+        NSLog(@"Username is empty.");
     }
-    // Save the username to plist
-    //[self saveUsernameToPlist:newUsername];
     
 }
 

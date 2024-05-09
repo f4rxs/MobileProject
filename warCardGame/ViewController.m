@@ -52,7 +52,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
                 
-    [self startGame];
+                if (self.username && self.username.length > 0) {
+                   
+                    self.playerLabel.text = self.username;
+                } else {
+                    
+                    self.playerLabel.text = @"Guest";
+                }
+    
+     [self startGame];
+       self.roundIndex = 0;
+       self.username = @""; // Initialize the username
     
     turn = 0;
 }
@@ -222,12 +232,11 @@
 }
 
 - (void) highestScore {
-    if(_player1Score > _highestScore && _player1Score > _player2Score) {
-        //_highestScore = _player1Score;
-        [self saveUsernameToPlist:newUsername];
-    }
-    else if (_player2Score > _highestScore ){
-       // _highestScore = _player2Score;
+    NSString *playerName = self.username; // Use the username property instead of newUsername
+    
+    if (_player1Score > _highestScore && _player1Score > _player2Score) {
+        [self saveUsernameToPlist:playerName]; // Pass the playerName to the save method
+    } else if (_player2Score > _highestScore) {
         [self saveUsernameToPlist:@"bot"];
     }
 }
@@ -257,26 +266,23 @@
 }
 
 - (void)saveUsernameToPlist:(NSString *)username {
-// Get the path to the plist file
-NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"userSettings" ofType:@"plist"];
-
-    if (newUsername.length > 0) {
-        // Get the path to the plist file in the Documents directory
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *documentsDirectory = [paths objectAtIndex:0];
-        plistPath = [documentsDirectory stringByAppendingPathComponent:@"Usernames.plist"];
-        
-        // Create a dictionary with the username
-        NSDictionary *usernameDict = @{@"Username": username};
-        
-        // Write the dictionary to the plist file
-        if ([usernameDict writeToFile:plistPath atomically:YES]) {
-            NSLog(@"Username added to plist successfully.");
-        } else {
-            NSLog(@"Failed to add username to plist.");
-        }
+if (username.length > 0) { // Check the length of the passed username
+    // Get the path to the plist file in the Documents directory
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *plistPath = [documentsDirectory stringByAppendingPathComponent:@"Usernames.plist"];
+    
+    // Create a dictionary with the username
+    NSDictionary *usernameDict = @{@"Username": username};
+    
+    // Write the dictionary to the plist file
+    if ([usernameDict writeToFile:plistPath atomically:YES]) {
+        NSLog(@"Username added to plist successfully.");
     } else {
-        NSLog(@"Username is empty.");
+        NSLog(@"Failed to add username to plist.");
     }
+} else {
+    NSLog(@"Username is empty.");
+}
 }
 @end

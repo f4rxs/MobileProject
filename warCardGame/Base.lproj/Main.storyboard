@@ -143,6 +143,7 @@
                         <outlet property="player1scorelabel" destination="eqb-cF-N2V" id="yDd-On-bG1"/>
                         <outlet property="player2card" destination="y4q-vL-Xnr" id="HfW-Zw-hrM"/>
                         <outlet property="player2scorelabel" destination="VkF-Wt-0cy" id="ee1-hg-5Nv"/>
+                        <outlet property="playerLabel" destination="rYv-74-2TY" id="bha-xe-QP6"/>
                         <outlet property="roundInicator" destination="obB-sl-Atv" id="mJK-2P-VGm"/>
                         <outlet property="winnerlabel" destination="kdj-dt-4wj" id="Evo-dC-61X"/>
                     </connections>
@@ -224,10 +225,10 @@
             </objects>
             <point key="canvasLocation" x="742.02898550724649" y="28.794642857142854"/>
         </scene>
-        <!--Scores-->
+        <!--Tabbar-->
         <scene sceneID="dQl-0Y-YjA">
             <objects>
-                <tabBarController title="Scores" automaticallyAdjustsScrollViewInsets="NO" id="Scw-6V-WDc" sceneMemberID="viewController">
+                <tabBarController title="Tabbar" automaticallyAdjustsScrollViewInsets="NO" id="Scw-6V-WDc" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zHw-gy-GI8">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
