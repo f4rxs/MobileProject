@@ -51,6 +51,7 @@
     [self startGame];
     
     //Cynthiaiiaiaia
+    //Cynthia 222222
     
 }
 
