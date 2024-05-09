@@ -51,7 +51,12 @@
     [self startGame];
     
     //Cynthiaiiaiaia
+<<<<<<< HEAD
 //    fares
+=======
+    //Cynthia 222222
+    
+>>>>>>> 354889256eb5d7cd06647b82b62a2336b92f2478
 }
 
 - (void)fillCardImageViewsWithRandomCards {
