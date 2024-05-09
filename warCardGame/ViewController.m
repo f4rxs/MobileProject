@@ -51,7 +51,7 @@
     [self startGame];
     
     //Cynthiaiiaiaia
-    
+//    fares
 }
 
 - (void)fillCardImageViewsWithRandomCards {
