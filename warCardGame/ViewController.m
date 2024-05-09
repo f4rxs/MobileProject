@@ -47,7 +47,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-                
+//               fares
     [self startGame];
     
     
