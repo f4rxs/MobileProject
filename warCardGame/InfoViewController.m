@@ -3,9 +3,11 @@
 @interface InfoViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *appLogoImageView;
-@property (weak, nonatomic) IBOutlet UILabel *visitorsCountLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *infoLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *visitorsCountLabel;
+
 
 @end
 

@@ -179,7 +179,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-877" y="29"/>
+            <point key="canvasLocation" x="-1070" y="19"/>
         </scene>
         <!--Menu-->
         <scene sceneID="9Kd-6Q-sMw">
@@ -189,20 +189,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NZE-Sq-aox">
+                                <rect key="frame" x="51" y="254" width="313" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="JIk-JT-znm">
+                                <rect key="frame" x="0.0" y="340" width="414" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
+                                    <!--1970-01-01 11:00:00 +0000-->
+                                </date>
+                            </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POR-vN-Eke">
-                                <rect key="frame" x="192" y="357" width="30" height="30"/>
+                                <rect key="frame" x="152" y="669" width="111" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Play"/>
                                 <connections>
                                     <action selector="playButtonPressed:" destination="Z4Y-q3-yRy" eventType="touchUpInside" id="vdb-02-Uhj"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KU4-vb-ccj">
-                                <rect key="frame" x="170" y="443" width="74" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="User name"/>
-                                <connections>
-                                    <action selector="userNameButtonPressed:" destination="Z4Y-q3-yRy" eventType="touchUpInside" id="Dz6-jX-BkD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -210,6 +215,10 @@
                         <viewLayoutGuide key="safeArea" id="crc-S1-dxR"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Menu" id="HWe-A9-2rd"/>
+                    <connections>
+                        <outlet property="datePicker" destination="JIk-JT-znm" id="n4G-Sd-ZM1"/>
+                        <outlet property="tfUsername" destination="NZE-Sq-aox" id="s6s-km-loa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oO9-O7-Qkr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -287,7 +296,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ip1-gR-7dU">
-                                <rect key="frame" x="186" y="552" width="42" height="21"/>
+                                <rect key="frame" x="62" y="573" width="166" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -299,14 +308,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Info" id="V5X-BJ-AZc"/>
                     <connections>
-                        <outlet property="appLogoImageView" destination="7X8-Rb-RJl" id="syi-Kn-o6p"/>
-                        <outlet property="infoLabel" destination="Ip1-gR-7dU" id="Si4-2f-s1V"/>
-                        <outlet property="visitorsCountLabel" destination="5hr-MJ-E8U" id="8I6-Tq-p1M"/>
+                        <outlet property="infoLabel" destination="Ip1-gR-7dU" id="5JS-qw-jar"/>
+                        <outlet property="visitorsCountLabel" destination="5hr-MJ-E8U" id="KqA-4b-0lT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CAi-AZ-MTv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="742" y="778"/>
+            <point key="canvasLocation" x="740.57971014492762" y="777.45535714285711"/>
         </scene>
     </scenes>
 </document>
