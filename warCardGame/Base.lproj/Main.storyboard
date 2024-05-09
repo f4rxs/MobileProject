@@ -179,7 +179,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-877" y="29"/>
+            <point key="canvasLocation" x="-978" y="-45"/>
         </scene>
         <!--Menu-->
         <scene sceneID="9Kd-6Q-sMw">
@@ -197,14 +197,6 @@
                                     <action selector="playButtonPressed:" destination="Z4Y-q3-yRy" eventType="touchUpInside" id="vdb-02-Uhj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KU4-vb-ccj">
-                                <rect key="frame" x="170" y="443" width="74" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="User name"/>
-                                <connections>
-                                    <action selector="userNameButtonPressed:" destination="Z4Y-q3-yRy" eventType="touchUpInside" id="Dz6-jX-BkD"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="crc-S1-dxR"/>
@@ -215,10 +207,10 @@
             </objects>
             <point key="canvasLocation" x="742.02898550724649" y="28.794642857142854"/>
         </scene>
-        <!--Scores-->
+        <!--Tab bar-->
         <scene sceneID="dQl-0Y-YjA">
             <objects>
-                <tabBarController title="Scores" automaticallyAdjustsScrollViewInsets="NO" id="Scw-6V-WDc" sceneMemberID="viewController">
+                <tabBarController title="Tab bar" automaticallyAdjustsScrollViewInsets="NO" id="Scw-6V-WDc" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zHw-gy-GI8">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -236,21 +228,6 @@
             </objects>
             <point key="canvasLocation" x="-168.11594202898553" y="28.794642857142854"/>
         </scene>
-        <!--User Name Input Controller-->
-        <scene sceneID="Kxg-oi-aHe">
-            <objects>
-                <viewController storyboardIdentifier="UserNameInputController" id="EjJ-Vq-lAT" customClass="UserNameInputController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="UZN-D5-qsN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="z1P-bY-b76"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ehb-lx-RWQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1136" y="888"/>
-        </scene>
         <!--Scores-->
         <scene sceneID="6gD-RR-N4X">
             <objects>
@@ -258,10 +235,29 @@
                     <view key="view" contentMode="scaleToFill" id="3jr-Dg-dj0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xt3-dI-h6l">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="F2Y-lu-aNv" id="ebh-Gg-Ixv"/>
+                                    <outlet property="delegate" destination="F2Y-lu-aNv" id="Y05-HN-WLk"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="oXd-65-FIN" firstAttribute="bottom" secondItem="xt3-dI-h6l" secondAttribute="bottom" id="Hf6-WX-4dw"/>
+                            <constraint firstItem="xt3-dI-h6l" firstAttribute="top" secondItem="oXd-65-FIN" secondAttribute="top" id="TI1-hO-sdv"/>
+                            <constraint firstItem="oXd-65-FIN" firstAttribute="trailing" secondItem="xt3-dI-h6l" secondAttribute="trailing" id="y3A-Pd-UQ1"/>
+                            <constraint firstItem="xt3-dI-h6l" firstAttribute="leading" secondItem="oXd-65-FIN" secondAttribute="leading" id="y70-N4-7jA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="oXd-65-FIN"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Scores" id="m76-7w-A2t"/>
+                    <connections>
+                        <outlet property="tableView" destination="xt3-dI-h6l" id="xJk-ow-nHp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="720-1Z-6er" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -280,33 +276,32 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hr-MJ-E8U">
-                                <rect key="frame" x="87" y="88" width="42" height="21"/>
+                                <rect key="frame" x="87" y="88" width="124" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ip1-gR-7dU">
-                                <rect key="frame" x="186" y="552" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A card game app where players compete against the CPU to win rounds by playing cards." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRp-T0-NFh">
+                                <rect key="frame" x="20" y="428" width="451" height="131"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="YXR-VQ-nVC"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Info" id="V5X-BJ-AZc"/>
                     <connections>
                         <outlet property="appLogoImageView" destination="7X8-Rb-RJl" id="syi-Kn-o6p"/>
-                        <outlet property="infoLabel" destination="Ip1-gR-7dU" id="Si4-2f-s1V"/>
                         <outlet property="visitorsCountLabel" destination="5hr-MJ-E8U" id="8I6-Tq-p1M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CAi-AZ-MTv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="742" y="778"/>
+            <point key="canvasLocation" x="740.57971014492762" y="777.45535714285711"/>
         </scene>
     </scenes>
 </document>

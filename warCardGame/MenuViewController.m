@@ -1,8 +1,16 @@
 
 #import "MenuViewController.h"
 #import "ViewController.h"
-#import "UserNameInputViewController.h"
+
 @implementation MenuViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+       // Increment the visitor count
+       NSInteger visitorCount = [[NSUserDefaults standardUserDefaults] integerForKey:@"VisitorCount"];
+       visitorCount++;
+       [[NSUserDefaults standardUserDefaults] setInteger:visitorCount forKey:@"VisitorCount"];
+}
 
 - (IBAction)playButtonPressed:(id)sender {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
@@ -11,14 +19,7 @@
     [self presentViewController:viewController animated:YES completion:nil];
 }
 
-- (IBAction)userNameButtonPressed:(id)sender {
-    
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UserNameInputController *userNameInputController = [storyboard instantiateViewControllerWithIdentifier:@"UserNameInputController"];
-    
-  
-    [self presentViewController:userNameInputController animated:YES completion:nil];
-}
+
 
 
 
