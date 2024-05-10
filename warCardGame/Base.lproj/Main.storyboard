@@ -143,6 +143,7 @@
                         <outlet property="player1scorelabel" destination="eqb-cF-N2V" id="yDd-On-bG1"/>
                         <outlet property="player2card" destination="y4q-vL-Xnr" id="HfW-Zw-hrM"/>
                         <outlet property="player2scorelabel" destination="VkF-Wt-0cy" id="ee1-hg-5Nv"/>
+                        <outlet property="playerLabel" destination="rYv-74-2TY" id="bha-xe-QP6"/>
                         <outlet property="roundInicator" destination="obB-sl-Atv" id="mJK-2P-VGm"/>
                         <outlet property="winnerlabel" destination="kdj-dt-4wj" id="Evo-dC-61X"/>
                     </connections>
@@ -179,7 +180,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-978" y="-45"/>
+            <point key="canvasLocation" x="-1070" y="19"/>
         </scene>
         <!--Menu-->
         <scene sceneID="9Kd-6Q-sMw">
@@ -189,8 +190,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NZE-Sq-aox">
+                                <rect key="frame" x="51" y="254" width="313" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="JIk-JT-znm">
+                                <rect key="frame" x="0.0" y="340" width="414" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
+                                    <!--1970-01-01 11:00:00 +0000-->
+                                </date>
+                            </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POR-vN-Eke">
-                                <rect key="frame" x="192" y="357" width="30" height="30"/>
+                                <rect key="frame" x="152" y="669" width="111" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Play"/>
                                 <connections>
@@ -202,15 +216,19 @@
                         <viewLayoutGuide key="safeArea" id="crc-S1-dxR"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Menu" id="HWe-A9-2rd"/>
+                    <connections>
+                        <outlet property="datePicker" destination="JIk-JT-znm" id="n4G-Sd-ZM1"/>
+                        <outlet property="tfUsername" destination="NZE-Sq-aox" id="s6s-km-loa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oO9-O7-Qkr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="742.02898550724649" y="28.794642857142854"/>
         </scene>
-        <!--Tab bar-->
+        <!--Tabbar-->
         <scene sceneID="dQl-0Y-YjA">
             <objects>
-                <tabBarController title="Tab bar" automaticallyAdjustsScrollViewInsets="NO" id="Scw-6V-WDc" sceneMemberID="viewController">
+                <tabBarController title="Tabbar" automaticallyAdjustsScrollViewInsets="NO" id="Scw-6V-WDc" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zHw-gy-GI8">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -282,8 +300,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A card game app where players compete against the CPU to win rounds by playing cards." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRp-T0-NFh">
-                                <rect key="frame" x="20" y="428" width="451" height="131"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ip1-gR-7dU">
+                                <rect key="frame" x="62" y="573" width="166" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                 <nil key="textColor"/>
@@ -295,8 +313,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Info" id="V5X-BJ-AZc"/>
                     <connections>
-                        <outlet property="appLogoImageView" destination="7X8-Rb-RJl" id="syi-Kn-o6p"/>
-                        <outlet property="visitorsCountLabel" destination="5hr-MJ-E8U" id="8I6-Tq-p1M"/>
+                        <outlet property="infoLabel" destination="Ip1-gR-7dU" id="5JS-qw-jar"/>
+                        <outlet property="visitorsCountLabel" destination="5hr-MJ-E8U" id="KqA-4b-0lT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CAi-AZ-MTv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

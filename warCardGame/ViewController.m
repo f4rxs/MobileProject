@@ -12,8 +12,12 @@
 @interface ViewController ()
 {
     int cardNumberForPlayer1, cardNumberForPlayer2;
+    
+    int turn;
     NSString *value1,*value2,*value3,*value4,*value5,*value6;
+    
 }
+
 @property (weak, nonatomic) IBOutlet UIImageView *player1card;
 @property (weak, nonatomic) IBOutlet UIImageView *player2card;
 @property (weak, nonatomic) IBOutlet UITextField *player1scorelabel;
@@ -49,10 +53,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+                
+                if (self.username && self.username.length > 0) {
+                   
+                    self.playerLabel.text = self.username;
+                } else {
+                    
+                    self.playerLabel.text = @"Guest";
+                }
 
-    [self startGame];
+     [self startGame];
+       self.roundIndex = 0;
+       self.username = @""; // Initialize the username
     
-    
+    turn = 0;
 }
 
 - (void)fillCardImageViewsWithRandomCards {
@@ -102,22 +116,28 @@
     NSString *title = sender.currentTitle;
     
     if([title isEqual:(@"DEAL")]) {
-       if (self.roundIndex < 6) {
-           int randomNumberForPlayer2 = arc4random_uniform(9) + 2;
-           cardNumberForPlayer2 = randomNumberForPlayer2;
-           self.cardOfPlayer2 = [NSString stringWithFormat:@"card%d", randomNumberForPlayer2];
-           self.player2card.image = [UIImage imageNamed:self.cardOfPlayer2];
-           
-           [self compareCards];
-           [self updateUI];
-           self.roundIndex++;
-       } else {
-           [sender setTitle:@"Replay" forState:UIControlStateNormal];
-           [self endGame];
-       }
+        if (turn == 1) {
+           if (self.roundIndex < 6) {
+               int randomNumberForPlayer2 = arc4random_uniform(9) + 2;
+               cardNumberForPlayer2 = randomNumberForPlayer2;
+               self.cardOfPlayer2 = [NSString stringWithFormat:@"card%d", randomNumberForPlayer2];
+               self.player2card.image = [UIImage imageNamed:self.cardOfPlayer2];
+               
+               [self compareCards];
+               [self updateUI];
+               self.roundIndex++;
+           } else {
+               [sender setTitle:@"Replay" forState:UIControlStateNormal];
+               [self endGame];
+           }
+            
+            turn = 0;
+        }
     } else if ([title isEqual:@"Replay"]) {
         [sender setTitle:@"DEAL" forState:UIControlStateNormal];
         [self startGame];
+        
+        turn = 0;
     }
        
     
@@ -170,6 +190,7 @@
 }
 
 - (IBAction)imageTap:(UITapGestureRecognizer *)imageTap {
+    if (turn == 0) {
       UIImageView *tappedImageView = (UIImageView *)imageTap.view;
        NSString *tappedCardName = [self cardNameForImageView:tappedImageView];
        
@@ -186,7 +207,11 @@
            
            tappedImageView.image = nil;
            tappedImageView.userInteractionEnabled = NO;
+           
+           turn = 1;
        }
+        
+    }
 }
 
 - (NSString *)cardNameForImageView:(UIImageView *)imageView {
@@ -208,11 +233,12 @@
 }
 
 - (void) highestScore {
-    if(_player1Score > _highestScore && _player1Score > _player2Score) {
-        _highestScore = _player1Score;
-    }
-    else if (_player2Score > _highestScore ){
-        _highestScore = _player2Score;
+    NSString *playerName = self.username; // Use the username property instead of newUsername
+    
+    if (_player1Score > _highestScore && _player1Score > _player2Score) {
+        [self saveUsernameToPlist:playerName]; // Pass the playerName to the save method
+    } else if (_player2Score > _highestScore) {
+        [self saveUsernameToPlist:@"bot"];
     }
 }
 
@@ -238,5 +264,26 @@
     [self addTapGestureRecognizerToImageView:self.cardimage5];
     [self addTapGestureRecognizerToImageView:self.cardimage6];
 
+}
+
+- (void)saveUsernameToPlist:(NSString *)username {
+if (username.length > 0) { // Check the length of the passed username
+    // Get the path to the plist file in the Documents directory
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *plistPath = [documentsDirectory stringByAppendingPathComponent:@"Usernames.plist"];
+    
+    // Create a dictionary with the username
+    NSDictionary *usernameDict = @{@"Username": username};
+    
+    // Write the dictionary to the plist file
+    if ([usernameDict writeToFile:plistPath atomically:YES]) {
+        NSLog(@"Username added to plist successfully.");
+    } else {
+        NSLog(@"Failed to add username to plist.");
+    }
+} else {
+    NSLog(@"Username is empty.");
+}
 }
 @end
