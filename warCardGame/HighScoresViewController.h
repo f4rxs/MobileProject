@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+<<<<<<< HEAD
 @interface HighScoresViewController : UIViewController
 
+=======
+@interface HighScoresViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@property (nonatomic, strong) NSArray<NSDictionary *> *playerScores;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+>>>>>>> fares
 
 
 @end

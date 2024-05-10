@@ -8,6 +8,10 @@
 
 #import "ViewController.h"
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> fares
 @interface ViewController ()
 {
     int cardNumberForPlayer1, cardNumberForPlayer2;
@@ -41,16 +45,26 @@
 @property (nonatomic,strong) NSMutableArray* playedCards;
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> fares
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+<<<<<<< HEAD
                 
     [self startGame];
     
     // CYNTHIA PUSHED COMMIT HERE
+=======
+
+    [self startGame];
+    
+>>>>>>> fares
     
 }
 
@@ -125,8 +139,12 @@
 
 
 - (void)compareCards {
+<<<<<<< HEAD
     //int cardNumberForPlayer1 = [self extractCardNumberFromName:self.cardOfPlayer1];
     //int cardNumberForPlayer2 = [self extractCardNumberFromName:self.cardOfPlayer2];
+=======
+   
+>>>>>>> fares
     
     if (cardNumberForPlayer1 > cardNumberForPlayer2) {
         self.player1Score+=2;
