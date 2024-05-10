@@ -4,7 +4,6 @@
 #import <Foundation/Foundation.h>
 #import "ViewController.h"
 
-<<<<<<< HEAD
 @interface MenuViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *tfUsername;
@@ -22,6 +21,10 @@ NSDate *date;
  // Do any additional setup after loading the view.
  NSDate *now = [NSDate date];
  [self.datePicker setDate:now animated:NO];
+    
+    NSInteger visitorCount = [[NSUserDefaults standardUserDefaults] integerForKey:@"VisitorCount"];
+    visitorCount++;
+    [[NSUserDefaults standardUserDefaults] setInteger:visitorCount forKey:@"VisitorCount"];
 }
 
 - (IBAction)playButtonPressed:(id)sender {//
@@ -62,37 +65,7 @@ viewController.playerLabel.text =newUsername;
     }
     
 }
-=======
-@implementation MenuViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-       // Increment the visitor count
-       NSInteger visitorCount = [[NSUserDefaults standardUserDefaults] integerForKey:@"VisitorCount"];
-       visitorCount++;
-       [[NSUserDefaults standardUserDefaults] setInteger:visitorCount forKey:@"VisitorCount"];
-}
-
-- (IBAction)playButtonPressed:(id)sender {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-   ViewController * viewController = [storyboard instantiateViewControllerWithIdentifier:@"viewController"];
-    // Present the other view controller
-    [self presentViewController:viewController animated:YES completion:nil];
-}
-
-
->>>>>>> 94f99b88e698176fea2fb944ea5b2c2b45cdfd62
-
-
-//- (IBAction)userNameButtonPressed:(id)sender {
-//
-//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//    UserNameInputController *userNameInputController = [storyboard instantiateViewControllerWithIdentifier:@"UserNameInputController"];
-//
-//
-//NSLog(@"Username is empty.");
-//    [self presentViewController:userNameInputController animated:YES completion:nil];
-//}
 
 @end
 	

@@ -53,7 +53,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-<<<<<<< HEAD
                 
                 if (self.username && self.username.length > 0) {
                    
@@ -62,11 +61,6 @@
                     
                     self.playerLabel.text = @"Guest";
                 }
-=======
-
-    [self startGame];
->>>>>>> 94f99b88e698176fea2fb944ea5b2c2b45cdfd62
-    
      [self startGame];
        self.roundIndex = 0;
        self.username = @""; // Initialize the username

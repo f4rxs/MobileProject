@@ -180,11 +180,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-<<<<<<< HEAD
             <point key="canvasLocation" x="-1070" y="19"/>
-=======
-            <point key="canvasLocation" x="-978" y="-45"/>
->>>>>>> 94f99b88e698176fea2fb944ea5b2c2b45cdfd62
         </scene>
         <!--Menu-->
         <scene sceneID="9Kd-6Q-sMw">
@@ -229,17 +225,10 @@
             </objects>
             <point key="canvasLocation" x="742.02898550724649" y="28.794642857142854"/>
         </scene>
-<<<<<<< HEAD
         <!--Tabbar-->
         <scene sceneID="dQl-0Y-YjA">
             <objects>
                 <tabBarController title="Tabbar" automaticallyAdjustsScrollViewInsets="NO" id="Scw-6V-WDc" sceneMemberID="viewController">
-=======
-        <!--Tab bar-->
-        <scene sceneID="dQl-0Y-YjA">
-            <objects>
-                <tabBarController title="Tab bar" automaticallyAdjustsScrollViewInsets="NO" id="Scw-6V-WDc" sceneMemberID="viewController">
->>>>>>> 94f99b88e698176fea2fb944ea5b2c2b45cdfd62
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zHw-gy-GI8">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -311,13 +300,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-<<<<<<< HEAD
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ip1-gR-7dU">
                                 <rect key="frame" x="62" y="573" width="166" height="31"/>
-=======
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A card game app where players compete against the CPU to win rounds by playing cards." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRp-T0-NFh">
-                                <rect key="frame" x="20" y="428" width="451" height="131"/>
->>>>>>> 94f99b88e698176fea2fb944ea5b2c2b45cdfd62
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                 <nil key="textColor"/>
@@ -329,13 +313,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Info" id="V5X-BJ-AZc"/>
                     <connections>
-<<<<<<< HEAD
                         <outlet property="infoLabel" destination="Ip1-gR-7dU" id="5JS-qw-jar"/>
                         <outlet property="visitorsCountLabel" destination="5hr-MJ-E8U" id="KqA-4b-0lT"/>
-=======
-                        <outlet property="appLogoImageView" destination="7X8-Rb-RJl" id="syi-Kn-o6p"/>
-                        <outlet property="visitorsCountLabel" destination="5hr-MJ-E8U" id="8I6-Tq-p1M"/>
->>>>>>> 94f99b88e698176fea2fb944ea5b2c2b45cdfd62
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CAi-AZ-MTv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
