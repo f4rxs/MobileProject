@@ -1,5 +1,10 @@
 #import "InfoViewController.h"
 
+<<<<<<< HEAD
+@implementation InfoViewController
+
+// Implement any methods or override superclass methods here
+=======
 @interface InfoViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *appLogoImageView;
@@ -27,5 +32,6 @@
     self.appLogoImageView.image = logoImage;
     
 }
+>>>>>>> fares
 
 @end

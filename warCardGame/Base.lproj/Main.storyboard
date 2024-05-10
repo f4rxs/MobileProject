@@ -180,7 +180,15 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="-1070" y="19"/>
+=======
+<<<<<<< HEAD
+            <point key="canvasLocation" x="-877" y="29"/>
+=======
+            <point key="canvasLocation" x="-978" y="-45"/>
+>>>>>>> fares
+>>>>>>> a0f45608031f5dc3da939e87f9cb8c164bb8b92d
         </scene>
         <!--Menu-->
         <scene sceneID="9Kd-6Q-sMw">
@@ -211,8 +219,21 @@
                                     <action selector="playButtonPressed:" destination="Z4Y-q3-yRy" eventType="touchUpInside" id="vdb-02-Uhj"/>
                                 </connections>
                             </button>
+<<<<<<< HEAD
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KU4-vb-ccj">
+                                <rect key="frame" x="170" y="443" width="74" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="User name"/>
+                                <connections>
+                                    <action selector="userNameButtonPressed:" destination="Z4Y-q3-yRy" eventType="touchUpInside" id="Dz6-jX-BkD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+=======
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+>>>>>>> fares
                         <viewLayoutGuide key="safeArea" id="crc-S1-dxR"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Menu" id="HWe-A9-2rd"/>
@@ -225,10 +246,24 @@
             </objects>
             <point key="canvasLocation" x="742.02898550724649" y="28.794642857142854"/>
         </scene>
+<<<<<<< HEAD
         <!--Tabbar-->
         <scene sceneID="dQl-0Y-YjA">
             <objects>
                 <tabBarController title="Tabbar" automaticallyAdjustsScrollViewInsets="NO" id="Scw-6V-WDc" sceneMemberID="viewController">
+=======
+<<<<<<< HEAD
+        <!--Scores-->
+        <scene sceneID="dQl-0Y-YjA">
+            <objects>
+                <tabBarController title="Scores" automaticallyAdjustsScrollViewInsets="NO" id="Scw-6V-WDc" sceneMemberID="viewController">
+=======
+        <!--Tab bar-->
+        <scene sceneID="dQl-0Y-YjA">
+            <objects>
+                <tabBarController title="Tab bar" automaticallyAdjustsScrollViewInsets="NO" id="Scw-6V-WDc" sceneMemberID="viewController">
+>>>>>>> fares
+>>>>>>> a0f45608031f5dc3da939e87f9cb8c164bb8b92d
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zHw-gy-GI8">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -246,6 +281,24 @@
             </objects>
             <point key="canvasLocation" x="-168.11594202898553" y="28.794642857142854"/>
         </scene>
+<<<<<<< HEAD
+        <!--User Name Input Controller-->
+        <scene sceneID="Kxg-oi-aHe">
+            <objects>
+                <viewController storyboardIdentifier="UserNameInputController" id="EjJ-Vq-lAT" customClass="UserNameInputController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UZN-D5-qsN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="z1P-bY-b76"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ehb-lx-RWQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1136" y="888"/>
+        </scene>
+=======
+>>>>>>> fares
         <!--Scores-->
         <scene sceneID="6gD-RR-N4X">
             <objects>
@@ -253,6 +306,12 @@
                     <view key="view" contentMode="scaleToFill" id="3jr-Dg-dj0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<<<<<<< HEAD
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="oXd-65-FIN"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Scores" id="m76-7w-A2t"/>
+=======
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xt3-dI-h6l">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
@@ -276,6 +335,7 @@
                     <connections>
                         <outlet property="tableView" destination="xt3-dI-h6l" id="xJk-ow-nHp"/>
                     </connections>
+>>>>>>> fares
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="720-1Z-6er" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -288,6 +348,16 @@
                     <view key="view" contentMode="scaleToFill" id="4kw-cq-oSD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<<<<<<< HEAD
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="YXR-VQ-nVC"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Info" id="V5X-BJ-AZc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CAi-AZ-MTv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="742" y="778"/>
+=======
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7X8-Rb-RJl">
                                 <rect key="frame" x="87" y="219" width="240" height="128"/>
@@ -320,6 +390,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CAi-AZ-MTv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="740.57971014492762" y="777.45535714285711"/>
+>>>>>>> fares
         </scene>
     </scenes>
 </document>

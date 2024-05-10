@@ -13,6 +13,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+<<<<<<< HEAD
+    // Do any additional setup after loading the view.
+=======
     
     // Create and configure the table view
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
@@ -64,6 +67,7 @@
     cell.detailTextLabel.text = [NSString stringWithFormat:@"Score: %@", playerScore[@"score"]];
     
     return cell;
+>>>>>>> fares
 }
 
 @end

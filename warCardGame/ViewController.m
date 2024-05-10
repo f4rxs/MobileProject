@@ -8,7 +8,10 @@
 
 #import "ViewController.h"
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> fares
 @interface ViewController ()
 {
     int cardNumberForPlayer1, cardNumberForPlayer2;
@@ -46,13 +49,17 @@
 @property (nonatomic,strong) NSMutableArray* playedCards;
 
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> fares
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+<<<<<<< HEAD
                 
                 if (self.username && self.username.length > 0) {
                    
@@ -65,6 +72,18 @@
      [self startGame];
        self.roundIndex = 0;
        self.username = @""; // Initialize the username
+=======
+<<<<<<< HEAD
+                
+    [self startGame];
+    
+    // CYNTHIA PUSHED COMMIT HERE
+=======
+
+    [self startGame];
+    
+>>>>>>> fares
+>>>>>>> a0f45608031f5dc3da939e87f9cb8c164bb8b92d
     
     turn = 0;
 }
@@ -146,7 +165,12 @@
 
 
 - (void)compareCards {
+<<<<<<< HEAD
+    //int cardNumberForPlayer1 = [self extractCardNumberFromName:self.cardOfPlayer1];
+    //int cardNumberForPlayer2 = [self extractCardNumberFromName:self.cardOfPlayer2];
+=======
    
+>>>>>>> fares
     
     if (cardNumberForPlayer1 > cardNumberForPlayer2) {
         self.player1Score+=2;

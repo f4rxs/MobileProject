@@ -3,6 +3,11 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import "ViewController.h"
+<<<<<<< HEAD
+#import "UserNameInputViewController.h"
+@implementation MenuViewController
+
+=======
 
 @interface MenuViewController ()
 
@@ -27,6 +32,7 @@ NSDate *date;
     [[NSUserDefaults standardUserDefaults] setInteger:visitorCount forKey:@"VisitorCount"];
 }
 
+<<<<<<< HEAD
 - (IBAction)playButtonPressed:(id)sender {//
 //    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
 //   ViewController * viewController = [storyboard instantiateViewControllerWithIdentifier:@"viewController"];
@@ -65,7 +71,28 @@ viewController.playerLabel.text =newUsername;
     }
     
 }
+=======
+>>>>>>> fares
+- (IBAction)playButtonPressed:(id)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+   ViewController * viewController = [storyboard instantiateViewControllerWithIdentifier:@"viewController"];
+    // Present the other view controller
+    [self presentViewController:viewController animated:YES completion:nil];
+}
 
+<<<<<<< HEAD
+- (IBAction)userNameButtonPressed:(id)sender {
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UserNameInputController *userNameInputController = [storyboard instantiateViewControllerWithIdentifier:@"UserNameInputController"];
+    
+  
+    [self presentViewController:userNameInputController animated:YES completion:nil];
+}
+=======
+>>>>>>> a0f45608031f5dc3da939e87f9cb8c164bb8b92d
+
+>>>>>>> fares
 
 
 //- (IBAction)userNameButtonPressed:(id)sender {
