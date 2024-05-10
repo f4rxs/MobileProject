@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		146157262BED351500F97562 /* PlayerScores.plist in Resources */ = {isa = PBXBuildFile; fileRef = 146157252BED351500F97562 /* PlayerScores.plist */; };
 		14712F402BECCE84009CBC2E /* HighScoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14712F3F2BECCE84009CBC2E /* HighScoresViewController.m */; };
 		14712F442BECD062009CBC2E /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14712F432BECD062009CBC2E /* MenuViewController.m */; };
 		14712F522BECE257009CBC2E /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14712F512BECE257009CBC2E /* InfoViewController.m */; };
@@ -51,7 +50,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		146157252BED351500F97562 /* PlayerScores.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PlayerScores.plist; sourceTree = "<group>"; };
 		14712F3F2BECCE84009CBC2E /* HighScoresViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HighScoresViewController.m; sourceTree = "<group>"; };
 		14712F412BECCEE7009CBC2E /* HighScoresViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HighScoresViewController.h; sourceTree = "<group>"; };
 		14712F432BECD062009CBC2E /* MenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
@@ -165,7 +163,6 @@
 				148E457A2B90AABA00A19337 /* Info.plist */,
 				148E457B2B90AABA00A19337 /* main.m */,
 				DC59C7B62B96F1BF004B9E5A /* card10.png */,
-				146157252BED351500F97562 /* PlayerScores.plist */,
 			);
 			path = warCardGame;
 			sourceTree = "<group>";
@@ -304,7 +301,6 @@
 				148E45742B90AAB700A19337 /* Main.storyboard in Resources */,
 				DC59C7C22B96F1C0004B9E5A /* card8.png in Resources */,
 				DC59C7C52B96F1C0004B9E5A /* card9.png in Resources */,
-				146157262BED351500F97562 /* PlayerScores.plist in Resources */,
 				DC59C7C12B96F1C0004B9E5A /* card3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

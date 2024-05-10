@@ -28,42 +28,49 @@ NSDate *date;
 }
 
 - (IBAction)playButtonPressed:(id)sender {//
-//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//   ViewController * viewController = [storyboard instantiateViewControllerWithIdentifier:@"viewController"];
-////         Present the other view controller
-//    [self presentViewController:viewController animated:YES completion:nil];
-//
-   
-//      NSString *newUsername = self.tfUsername.text; // Get the username from the text field
-//
-//      if (newUsername.length > 0) {
-//          UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//          ViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"viewController"];
-//
-//          // Set the username property of the ViewController
-//          viewController.username = newUsername;
-//
-//          // Present the ViewController
-//          [self presentViewController:viewController animated:YES completion:nil];
-//      } else {
-//          NSLog(@"Username is empty.");
-//      }
-    
-    NSString *newUsername = self.tfUsername.text;
+
+   NSString *newUsername = self.tfUsername.text;
 
     if (newUsername.length > 0) {
+        [self saveUsernameToUserDefaults:newUsername];
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         ViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"viewController"];
 
         // Set the username property of the ViewController
         viewController.username = newUsername;
-viewController.playerLabel.text =newUsername;
+        viewController.playerLabel.text = newUsername;
+
         // Present the ViewController
         [self presentViewController:viewController animated:YES completion:nil];
     } else {
         NSLog(@"Username is empty.");
     }
     
+}
+- (void)saveUsernameToUserDefaults:(NSString *)username {
+    if (username.length > 0) {
+        // Get UserDefaults instance
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        
+        // Retrieve existing usernames array or create a new one if it doesn't exist
+        NSMutableArray *usernames = [[defaults objectForKey:@"Usernames"] mutableCopy];
+        if (!usernames) {
+            usernames = [NSMutableArray array];
+        }
+        
+        // Add the new username to the array
+        [usernames addObject:username];
+        
+        // Save the updated array of usernames
+        [defaults setObject:usernames forKey:@"Usernames"];
+        
+        // Ensure changes are saved immediately
+        [defaults synchronize];
+        
+        NSLog(@"Username saved to UserDefaults: %@", username);
+    } else {
+        NSLog(@"Username is empty.");
+    }
 }
 
 

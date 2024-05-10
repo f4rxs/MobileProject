@@ -12,5 +12,6 @@
 @property (nonatomic, strong) NSArray<NSDictionary *> *playerScores;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+@property (nonatomic, strong) NSArray *usernames;
 
 @end
