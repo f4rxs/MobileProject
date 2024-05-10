@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 
+
 @interface ViewController ()
 {
     int cardNumberForPlayer1, cardNumberForPlayer2;
@@ -45,12 +46,14 @@
 @property (nonatomic,strong) NSMutableArray* playedCards;
 
 
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+<<<<<<< HEAD
                 
                 if (self.username && self.username.length > 0) {
                    
@@ -59,6 +62,10 @@
                     
                     self.playerLabel.text = @"Guest";
                 }
+=======
+
+    [self startGame];
+>>>>>>> 94f99b88e698176fea2fb944ea5b2c2b45cdfd62
     
      [self startGame];
        self.roundIndex = 0;
@@ -144,8 +151,7 @@
 
 
 - (void)compareCards {
-    //int cardNumberForPlayer1 = [self extractCardNumberFromName:self.cardOfPlayer1];
-    //int cardNumberForPlayer2 = [self extractCardNumberFromName:self.cardOfPlayer2];
+   
     
     if (cardNumberForPlayer1 > cardNumberForPlayer2) {
         self.player1Score+=2;

@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		146157262BED351500F97562 /* PlayerScores.plist in Resources */ = {isa = PBXBuildFile; fileRef = 146157252BED351500F97562 /* PlayerScores.plist */; };
 		14712F402BECCE84009CBC2E /* HighScoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14712F3F2BECCE84009CBC2E /* HighScoresViewController.m */; };
 		14712F442BECD062009CBC2E /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14712F432BECD062009CBC2E /* MenuViewController.m */; };
-		14712F472BECD8D4009CBC2E /* UserNameInputController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14712F462BECD8D4009CBC2E /* UserNameInputController.m */; };
 		14712F522BECE257009CBC2E /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14712F512BECE257009CBC2E /* InfoViewController.m */; };
 		147EC5732BECF49B009D6E6E /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 147EC5722BECF49B009D6E6E /* logo.png */; };
 		147EC5752BECF4BA009D6E6E /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 147EC5742BECF4BA009D6E6E /* logo.png */; };
@@ -51,12 +51,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		146157252BED351500F97562 /* PlayerScores.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PlayerScores.plist; sourceTree = "<group>"; };
 		14712F3F2BECCE84009CBC2E /* HighScoresViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HighScoresViewController.m; sourceTree = "<group>"; };
 		14712F412BECCEE7009CBC2E /* HighScoresViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HighScoresViewController.h; sourceTree = "<group>"; };
-		14712F422BECCFF2009CBC2E /* UserNameInputViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserNameInputViewController.h; sourceTree = "<group>"; };
 		14712F432BECD062009CBC2E /* MenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		14712F452BECD08F009CBC2E /* MenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
-		14712F462BECD8D4009CBC2E /* UserNameInputController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserNameInputController.m; sourceTree = "<group>"; };
 		14712F502BECE235009CBC2E /* InfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		14712F512BECE257009CBC2E /* InfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		147EC5722BECF49B009D6E6E /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../cards/logo.png; sourceTree = "<group>"; };
@@ -141,8 +140,6 @@
 				148E45692B90AAB700A19337 /* AppDelegate.h */,
 				148E456A2B90AAB700A19337 /* AppDelegate.m */,
 				148E456C2B90AAB700A19337 /* SceneDelegate.h */,
-				14712F422BECCFF2009CBC2E /* UserNameInputViewController.h */,
-				14712F462BECD8D4009CBC2E /* UserNameInputController.m */,
 				14712F3F2BECCE84009CBC2E /* HighScoresViewController.m */,
 				14712F412BECCEE7009CBC2E /* HighScoresViewController.h */,
 				148E456D2B90AAB700A19337 /* SceneDelegate.m */,
@@ -168,6 +165,7 @@
 				148E457A2B90AABA00A19337 /* Info.plist */,
 				148E457B2B90AABA00A19337 /* main.m */,
 				DC59C7B62B96F1BF004B9E5A /* card10.png */,
+				146157252BED351500F97562 /* PlayerScores.plist */,
 			);
 			path = warCardGame;
 			sourceTree = "<group>";
@@ -306,6 +304,7 @@
 				148E45742B90AAB700A19337 /* Main.storyboard in Resources */,
 				DC59C7C22B96F1C0004B9E5A /* card8.png in Resources */,
 				DC59C7C52B96F1C0004B9E5A /* card9.png in Resources */,
+				146157262BED351500F97562 /* PlayerScores.plist in Resources */,
 				DC59C7C12B96F1C0004B9E5A /* card3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,7 +331,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				148E45712B90AAB700A19337 /* ViewController.m in Sources */,
-				14712F472BECD8D4009CBC2E /* UserNameInputController.m in Sources */,
 				14712F522BECE257009CBC2E /* InfoViewController.m in Sources */,
 				148E456B2B90AAB700A19337 /* AppDelegate.m in Sources */,
 				14712F402BECCE84009CBC2E /* HighScoresViewController.m in Sources */,

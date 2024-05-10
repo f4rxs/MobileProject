@@ -4,6 +4,7 @@
 #import <Foundation/Foundation.h>
 #import "ViewController.h"
 
+<<<<<<< HEAD
 @interface MenuViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *tfUsername;
@@ -61,6 +62,26 @@ viewController.playerLabel.text =newUsername;
     }
     
 }
+=======
+@implementation MenuViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+       // Increment the visitor count
+       NSInteger visitorCount = [[NSUserDefaults standardUserDefaults] integerForKey:@"VisitorCount"];
+       visitorCount++;
+       [[NSUserDefaults standardUserDefaults] setInteger:visitorCount forKey:@"VisitorCount"];
+}
+
+- (IBAction)playButtonPressed:(id)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+   ViewController * viewController = [storyboard instantiateViewControllerWithIdentifier:@"viewController"];
+    // Present the other view controller
+    [self presentViewController:viewController animated:YES completion:nil];
+}
+
+
+>>>>>>> 94f99b88e698176fea2fb944ea5b2c2b45cdfd62
 
 
 //- (IBAction)userNameButtonPressed:(id)sender {
@@ -74,3 +95,4 @@ viewController.playerLabel.text =newUsername;
 //}
 
 @end
+	
